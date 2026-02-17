@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Sok & Bopha Wedding - ២៧ មេសា ២០២៦</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Kantumruy+Pro:wght@100;200;300;400;500;600;700&family=Moul&family=Playfair+Display:wght@400;500;600;700;800&family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Custom Khmer Fonts */
+        @font-face {
+            font-family: 'Kh Writhand';
+            src: local('DaunPenh'), local('Kh Writhand'), url('fonts/your-khmer-font.woff2') format('woff2');
+            font-display: swap;
+        }
+
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Battambang', 'Kantumruy Pro', 'Kh Writhand', 'Noto Sans Khmer', Arial, sans-serif;
+            background: #0f0f0f;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.6;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background-image: 
+                radial-gradient(ellipse at center, rgba(190, 18, 60, 0.15) 0%, rgba(0,0,0,0.85) 70%),
+                linear-gradient(135deg, rgba(190, 18, 60, 0.1) 0%, rgba(0,0,0,0.9) 100%),
+                url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&h=1080&fit=crop&crop=center');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            z-index: 2;
+            max-width: 800px;
+            padding: 40px 20px;
+            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-family: 'Great Vibes', cursive;
+            background: linear-gradient(135deg, #be123c, #e11d48, #f43f5e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(190, 18, 60, 0.5);
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(190, 18, 60, 0.5)); }
+            to { filter: drop-shadow(0 0 40px rgba(190, 18, 60, 0.8)); }
+        }
+
+        .hero .names {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-family: 'Moul', serif;
+            color: white;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            letter-spacing: 2px;
+        }
+
+        .hero .date {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-family: 'Kantumruy Pro', sans-serif;
+            color: #f8fafc;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+            font-weight: 600;
+        }
+
+        .decorative {
+            display: inline-block;
+            font-size: 2rem;
+            margin: 0 20px;
+            color: #be123c;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        /* Content Sections */
+        .content {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            margin-bottom: 80px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-family: 'Moul', serif;
+            color: #be123c;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .event-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .event-card {
+            background: linear-gradient(135deg, rgba(190, 18, 60, 0.1) 0%, rgba(0,0,0,0.8) 100%);
+            border-radius: 20px;
+            padding: 40px 30px;
+            border: 1px solid rgba(190, 18, 60, 0.3);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(190, 18, 60, 0.2);
+        }
+
+        .event-card h3 {
+            font-size: 1.8rem;
+            font-family: 'Kantumruy Pro', sans-serif;
+            color: #be123c;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .event-card p {
+            font-size: 1.2rem;
+            color: #e2e8f0;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .event-card .time {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-top: 15px;
+        }
+
+        /* Countdown Timer */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .countdown-item {
+            background: linear-gradient(135deg, #be123c, #e11d48);
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            min-width: 120px;
+            box-shadow: 0 10px 25px rgba(190, 18, 60, 0.3);
+        }
+
+        .countdown-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: white;
+            display: block;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .countdown-label {
+            font-size: 1rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        /* Parents Section */
+        .parents-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+            margin-top: 60px;
+        }
+
+        .parent-card {
+            background: linear-gradient(135deg, rgba(190, 18, 60, 0.05) 0%, rgba(0,0,0,0.7) 100%);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(190, 18, 60, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        .parent-card h4 {
+            font-size: 1.5rem;
+            font-family: 'Kantumruy Pro', sans-serif;
+            color: #be123c;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .parent-card .parent-name {
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #be123c, #e11d48);
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 100px;
+        }
+
+        footer p {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .hero {
+                background-attachment: scroll;
+                background-size: contain;
+                min-height: 100vh;
+                padding: 20px 10px;
+            }
+
+            .hero-content {
+                padding: 30px 15px;
+                margin: 10px;
+            }
+
+            .content {
+                padding: 60px 15px;
+            }
+
+            .event-details {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .countdown {
+                gap: 15px;
+            }
+
+            .countdown-item {
+                padding: 20px 15px;
+                min-width: 100px;
+            }
+
+            .countdown-number {
+                font-size: 2.5rem;
+            }
+
+            .parents-info {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        /* iOS Safari specific fixes */
+        @supports (-webkit-touch-callout: none) {
+            .hero {
+                background-attachment: scroll;
+                height: 100vh;
+                height: -webkit-fill-available;
+            }
+            
+            body {
+                -webkit-text-size-adjust: 100%;
+            }
+        }
+
+        /* Touch optimizations */
+        * {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        input, textarea, button {
+            -webkit-user-select: auto;
+            user-select: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Wedding Invitation</h1>
+            <div class="decorative">🌸</div>
+            <div class="names">សុខ & បុប្ផា</div>
+            <div class="decorative">💖</div>
+            <div class="date">២៧ មេសា ២០២៦</div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Wedding Details -->
+        <section class="content-section">
+            <h2 class="section-title">🎊 ព័ត៌មានអាពាហ៍ពិពាហ៍ 🎊</h2>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">0</span>
+                    <span class="countdown-label">ថ្ងៃ</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">0</span>
+                    <span class="countdown-label">ម៉ោង</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">0</span>
+                    <span class="countdown-label">នាទី</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">0</span>
+                    <span class="countdown-label">វិនាទី</span>
+                </div>
+            </div>
+
+            <div class="event-details">
+                <div class="event-card">
+                    <h3>🏛️ កម្មវិធីបុណ្យ</h3>
+                    <div class="time">៧:០០ ព្រឹក</div>
+                    <p>📅 ថ្ងៃ: ៨ កើត ខែ ពិសាខ ឆ្នាំថោះ បញ្ចស័ក ព.ស. ២៥៧០</p>
+                    <p>🏠 ទីកន្លែង: ផ្ទះកូនក្រមុំ</p>
+                    <p>📍 អាសយដ្ឋាន: ភូមិ ស្រុក ខេត្ត</p>
+                </div>
+                
+                <div class="event-card">
+                    <h3>💒 ពិធីមង្គលការ</h3>
+                    <div class="time">៦:០០ ល្ងាច</div>
+                    <p>📅 ថ្ងៃ: ២៧ មេសា ២០២៦</p>
+                    <p>🏰 ទីកន្លែង: សាលកុឹបស្តុក</p>
+                    <p>📍 អាសយដ្ឋាន: ភូមិ ស្រុក ខេត្ត</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parents Information -->
+        <section class="content-section">
+            <h2 class="section-title">👨‍👩‍👧‍👦 ព័ត៌មានគ្រួសារ 👨‍👩‍👧‍👦</h2>
+            <div class="parents-info">
+                <div class="parent-card">
+                    <h4>🤵 ឪពុកម្តាយកូនក្រមុំ</h4>
+                    <div class="parent-name">👨 ឪពុក: [ឈ្មោះឪពុក]</div>
+                    <div class="parent-name">👩 ម្តាយ: [ឈ្មោះម្តាយ]</div>
+                </div>
+                <div class="parent-card">
+                    <h4>👰 ឪពុកម្តាយកូនកំលោះ</h4>
+                    <div class="parent-name">👨 ឪពុក: [ឈ្មោះឪពុក]</div>
+                    <div class="parent-name">👩 ម្តាយ: [ឈ្មោះម្តាយ]</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p style="font-size: 1rem; margin-bottom: 10px;">✨ រីករាយជាមួយនឹងការប្រារព្ធមង្គលការ ✨</p>
+        <p>© 2026 Created with 💖 by <span style="background: linear-gradient(135deg, #ffffff, #f8fafc); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 600;">TheanService</span></p>
+    </footer>
+
+    <script>
+        // 🎵 EMBEDDED WEDDING MUSIC SYSTEM - NO EXTERNAL FILES REQUIRED
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🎵 Initializing embedded wedding music system...');
+            
+            let audioContext = null;
+            let audioBuffer = null;
+            let source = null;
+            let gainNode = null;
+            let isPlaying = false;
+            let audioStarted = false;
+
+            // Create Audio Context
+            function initAudioContext() {
+                try {
+                    const AudioContext = window.AudioContext || window.webkitAudioContext;
+                    audioContext = new AudioContext();
+                    gainNode = audioContext.createGain();
+                    gainNode.connect(audioContext.destination);
+                    gainNode.gain.value = 0.6;
+                    console.log('🎵 Audio Context initialized');
+                    return true;
+                } catch (e) {
+                    console.log('Web Audio API not supported');
+                    return false;
+                }
+            }
+
+            // Generate beautiful wedding melody using Web Audio API
+            function generateWeddingMelody() {
+                if (!audioContext) return null;
+
+                const sampleRate = audioContext.sampleRate;
+                const length = sampleRate * 6; // 6 seconds
+                const buffer = audioContext.createBuffer(2, length, sampleRate);
+                const leftChannel = buffer.getChannelData(0);
+                const rightChannel = buffer.getChannelData(1);
+
+                // Wedding melody - romantic and beautiful
+                const melody = [
+                    { freq: 523.25, start: 0.0, duration: 0.8 }, // C5
+                    { freq: 587.33, start: 0.8, duration: 0.8 }, // D5
+                    { freq: 659.25, start: 1.6, duration: 0.8 }, // E5
+                    { freq: 698.46, start: 2.4, duration: 0.8 }, // F5
+                    { freq: 783.99, start: 3.2, duration: 0.8 }, // G5
+                    { freq: 880.00, start: 4.0, duration: 1.0 }, // A5
+                    { freq: 783.99, start: 5.0, duration: 1.0 }, // G5
+                ];
+
+                // Bass harmony
+                const bass = [
+                    { freq: 261.63, start: 0.0, duration: 1.6 }, // C4
+                    { freq: 349.23, start: 1.6, duration: 1.6 }, // F4
+                    { freq: 392.00, start: 3.2, duration: 2.8 }, // G4
+                ];
+
+                // Generate audio
+                for (let i = 0; i < length; i++) {
+                    const time = i / sampleRate;
+                    let leftAmp = 0;
+                    let rightAmp = 0;
+
+                    // Melody
+                    melody.forEach(note => {
+                        if (time >= note.start && time < note.start + note.duration) {
+                            const noteTime = time - note.start;
+                            const envelope = Math.exp(-noteTime * 2) * (1 - noteTime / note.duration * 0.3);
+                            rightAmp += Math.sin(2 * Math.PI * note.freq * noteTime) * envelope * 0.2;
+                        }
+                    });
+
+                    // Bass
+                    bass.forEach(note => {
+                        if (time >= note.start && time < note.start + note.duration) {
+                            const noteTime = time - note.start;
+                            const envelope = Math.exp(-noteTime * 1) * (1 - noteTime / note.duration * 0.2);
+                            leftAmp += Math.sin(2 * Math.PI * note.freq * noteTime) * envelope * 0.15;
+                        }
+                    });
+
+                    leftChannel[i] = leftAmp + rightAmp * 0.3; // Mix some melody to left
+                    rightChannel[i] = rightAmp + leftAmp * 0.2; // Mix some bass to right
+                }
+
+                return buffer;
+            }
+
+            // Play wedding melody
+            function playWeddingMusic() {
+                if (!audioContext || !audioBuffer) return false;
+
+                try {
+                    if (source) {
+                        source.stop(0);
+                        source.disconnect();
+                    }
+
+                    source = audioContext.createBufferSource();
+                    source.buffer = audioBuffer;
+                    source.connect(gainNode);
+                    source.start(0);
+                    isPlaying = true;
+                    
+                    console.log('🎵 Wedding melody playing!');
+                    
+                    // Loop the music
+                    source.onended = function() {
+                        if (isPlaying && audioStarted) {
+                            setTimeout(() => {
+                                if (isPlaying && audioStarted) {
+                                    playWeddingMusic();
+                                }
+                            }, 200);
+                        }
+                    };
+                    
+                    return true;
+                } catch (e) {
+                    console.error('Error playing music:', e);
+                    return false;
+                }
+            }
+
+            // Stop music
+            function stopWeddingMusic() {
+                if (source) {
+                    try {
+                        source.stop(0);
+                        source.disconnect();
+                    } catch (e) {}
+                    source = null;
+                }
+                isPlaying = false;
+            }
+
+            // Create welcome overlay
+            function createWelcomeOverlay() {
+                const overlay = document.createElement('div');
+                overlay.style.cssText = `
+                    position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+                    background: linear-gradient(135deg, rgba(190, 18, 60, 0.95), rgba(225, 29, 72, 0.95));
+                    color: white; display: flex; flex-direction: column; 
+                    align-items: center; justify-content: center; z-index: 10000;
+                    font-family: 'Battambang', Arial, sans-serif; text-align: center;
+                `;
+                
+                overlay.innerHTML = `
+                    <div style="max-width: 350px; padding: 40px 20px;">
+                        <div style="font-size: 4rem; margin-bottom: 20px; animation: pulse 2s infinite;">🎵</div>
+                        <h1 style="font-size: 2.5rem; margin-bottom: 15px; font-family: 'Great Vibes', cursive;">សូមស្វាគមន៍</h1>
+                        <h2 style="font-size: 1.8rem; margin-bottom: 25px; font-family: 'Moul', serif;">តន្ត្រីមង្គលការ</h2>
+                        <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">ចុចដើម្បីបើកតន្ត្រី</p>
+                        <button style="background: white; color: #be123c; border: none; padding: 20px 40px; border-radius: 50px; font-size: 1.3rem; font-weight: bold; cursor: pointer; box-shadow: 0 8px 25px rgba(255,255,255,0.3); transition: all 0.3s; font-family: 'Battambang', Arial;" id="startMusicBtn">
+                            🎶 ចាប់ផ្តើម
+                        </button>
+                        <p style="margin-top: 20px; opacity: 0.7; font-size: 0.9rem;">✨ មិនត្រូវការឯកសារក្រៅ!</p>
+                    </div>
+                `;
+                
+                document.body.appendChild(overlay);
+                
+                function startMusic(e) {
+                    if (audioStarted) return;
+                    if (e) e.preventDefault();
+                    
+                    audioStarted = true;
+                    console.log('🎵 Starting embedded music...');
+                    
+                    if (audioContext && audioContext.state === 'suspended') {
+                        audioContext.resume().then(() => attemptStart());
+                    } else {
+                        attemptStart();
+                    }
+                    
+                    function attemptStart() {
+                        if (playWeddingMusic()) {
+                            overlay.remove();
+                            showMessage('🎵 តន្ត្រីមង្គលការកំពុងចាក់', '#22c55e');
+                            createMusicControl();
+                        } else {
+                            overlay.remove();
+                            showMessage('⚠️ មិនអាចចាក់តន្ត្រីបាន', '#f59e0b');
+                        }
+                    }
+                }
+                
+                document.getElementById('startMusicBtn').addEventListener('click', startMusic);
+                overlay.addEventListener('touchstart', startMusic, { passive: true, once: true });
+                overlay.addEventListener('click', startMusic, { once: true });
+                
+                // Auto-start after 2 seconds
+                setTimeout(() => {
+                    if (overlay.parentNode && !audioStarted) {
+                        startMusic();
+                    }
+                }, 2000);
+            }
+            
+            // Show messages
+            function showMessage(text, color) {
+                const msg = document.createElement('div');
+                msg.style.cssText = `
+                    position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+                    background: white; color: ${color}; padding: 15px 25px; border-radius: 25px;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 1001; font-weight: bold;
+                    font-family: 'Battambang', Arial;
+                `;
+                msg.textContent = text;
+                document.body.appendChild(msg);
+                setTimeout(() => msg.remove(), 3000);
+            }
+            
+            // Music control button
+            function createMusicControl() {
+                const btn = document.createElement('div');
+                btn.innerHTML = '🎵';
+                btn.style.cssText = `
+                    position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px;
+                    background: linear-gradient(135deg, #be123c, #e11d48); border-radius: 50%;
+                    display: flex; align-items: center; justify-content: center; cursor: pointer;
+                    box-shadow: 0 4px 20px rgba(190, 18, 60, 0.4); z-index: 1000;
+                    font-size: 24px; transition: all 0.3s; user-select: none;
+                `;
+                
+                btn.addEventListener('click', function() {
+                    if (isPlaying) {
+                        stopWeddingMusic();
+                        btn.innerHTML = '⏸️';
+                        btn.style.background = '#6b7280';
+                        showMessage('⏸️ បញ្ឈប់តន្ត្រី', '#f59e0b');
+                    } else {
+                        if (audioContext && audioContext.state === 'suspended') {
+                            audioContext.resume().then(() => {
+                                if (playWeddingMusic()) {
+                                    btn.innerHTML = '🎵';
+                                    btn.style.background = 'linear-gradient(135deg, #be123c, #e11d48)';
+                                    showMessage('▶️ បន្តតន្ត្រី', '#22c55e');
+                                }
+                            });
+                        } else {
+                            if (playWeddingMusic()) {
+                                btn.innerHTML = '🎵';
+                                btn.style.background = 'linear-gradient(135deg, #be123c, #e11d48)';
+                                showMessage('▶️ បន្តតន្ត្រី', '#22c55e');
+                            }
+                        }
+                    }
+                    
+                    if (navigator.vibrate) navigator.vibrate(50);
+                });
+                
+                document.body.appendChild(btn);
+            }
+            
+            // Initialize
+            const webAudioSupported = initAudioContext();
+            
+            if (webAudioSupported) {
+                audioBuffer = generateWeddingMelody();
+                console.log('✅ Wedding melody generated!');
+                createWelcomeOverlay();
+            } else {
+                console.log('⚠️ Web Audio not supported');
+                showMessage('⚠️ Browser មិនគាំទ្រ Web Audio', '#f59e0b');
+            }
+            
+            console.log('✅ Embedded music system ready!');
+        });
+
+        // Countdown Timer
+        function updateCountdown() {
+            const weddingDate = new Date('April 27, 2026 18:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+                document.getElementById('seconds').textContent = seconds;
+            } else {
+                document.getElementById('countdown').innerHTML = '<h2 style="color: #be123c; font-size: 2rem;">🎉 ថ្ងៃមង្គលការបានមកដល់! 🎉</h2>';
+            }
+        }
+
+        // Update countdown every second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>

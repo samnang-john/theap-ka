@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Sok & Bopha Wedding - ២៧ មេសា ២០២៦</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Kantumruy+Pro:wght@100;200;300;400;500;600;700&family=Moul&family=Playfair+Display:wght@400;500;600;700;800&family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Fix iOS Safari viewport issues */
+        @supports (-webkit-touch-callout: none) {
+            .hero-section {
+                min-height: -webkit-fill-available;
+            }
+        }
+        
+        /* Additional mobile optimizations */
+        input, textarea, select {
+            font-size: 16px; /* Prevent zoom on iOS Safari */
+            -webkit-appearance: none;
+            appearance: none;
+            border-radius: 0;
+        }
+        
+        /* Fix for iOS Safari bottom safe area */
+        @supports(padding: max(0px)) {
+            .hero-section {
+                padding-bottom: max(20px, env(safe-area-inset-bottom));
+            }
+        }
+        
+        /* Improve scrolling performance */
+        * {
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .font-wedding { 
+            font-family: 'Great Vibes', 'Moul', cursive;
+            font-style: italic;
+            letter-spacing: 2px;
+        }
+        .font-khmer-elegant {
+            font-family: 'Moul', 'Battambang', serif;
+            font-weight: 400;
+        }
+        .hero-section {
+            height: 100vh;
+            background-image: linear-gradient(135deg, rgba(219, 39, 119, 0.15), rgba(236, 72, 153, 0.1), rgba(251, 113, 133, 0.05)), 
+                              url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="%23fdf2f8"/><g opacity="0.1"><circle cx="200" cy="200" r="150" fill="%23be123c"/><circle cx="1000" cy="150" r="100" fill="%23e11d48"/><circle cx="600" cy="500" r="200" fill="%23f43f5e"/><circle cx="100" cy="600" r="80" fill="%23fb7185"/></g></svg>');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+            z-index: 2;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            font-family: 'Great Vibes', cursive;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+            color: #be123c;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        .hero-subtitle {
+            font-size: 2.5rem;
+            font-family: 'Moul', serif;
+            margin-bottom: 2rem;
+            color: #1f2937;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+        }
+        
+        .wedding-date {
+            font-size: 1.8rem;
+            font-family: 'Battambang', sans-serif;
+            margin-bottom: 3rem;
+            padding: 20px 40px;
+            background: rgba(190, 18, 60, 0.9);
+            border-radius: 50px;
+            color: white;
+            box-shadow: 0 10px 30px rgba(190, 18, 60, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        /* Guest Input Styling */
+        .guest-input {
+            margin-bottom: 2rem;
+            padding: 15px 25px;
+            font-size: 1.2rem;
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.95);
+            color: #1f2937;
+            font-family: 'Battambang', sans-serif;
+            text-align: center;
+            max-width: 300px;
+            transition: all 0.3s ease;
+        }
+        
+        .guest-input:focus {
+            outline: none;
+            border-color: #be123c;
+            box-shadow: 0 0 20px rgba(190, 18, 60, 0.5);
+            transform: scale(1.05);
+        }
+        
+        .guest-input::placeholder {
+            color: #9ca3af;
+            opacity: 0.8;
+        }
+
+        .arrow {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            color: #be123c;
+            cursor: pointer;
+            animation: bounce 2s infinite;
+            transition: all 0.3s ease;
+        }
+        
+        .arrow:hover {
+            color: #e11d48;
+            transform: translateX(-50%) scale(1.2);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Battambang', Arial, sans-serif;
+            line-height: 1.8;
+            background: linear-gradient(135deg, #fdf2f8 0%, #fff1f2 50%, #fef7ff 100%);
+            color: #1f2937;
+            overflow-x: hidden;
+        }
+
+        .section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            margin: 40px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(190, 18, 60, 0.15);
+        }
+
+        .card h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: #be123c;
+            font-family: 'Moul', serif;
+            position: relative;
+        }
+
+        .card h2::before,
+        .card h2::after {
+            content: "✨";
+            position: absolute;
+            top: 0;
+            color: #f43f5e;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        .card h2::before {
+            left: -50px;
+        }
+
+        .card h2::after {
+            right: -50px;
+            animation-delay: 1s;
+        }
+
+        .card p {
+            font-size: 1.3rem;
+            line-height: 2.2;
+            color: #374151;
+            margin: 20px 0;
+        }
+
+        /* Decorative corners */
+        .corner-top-left,
+        .corner-bottom-right {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #be123c, #e11d48);
+            opacity: 0.1;
+        }
+
+        .corner-top-left {
+            top: 0;
+            left: 0;
+            border-radius: 0 0 100% 0;
+        }
+
+        .corner-bottom-right {
+            bottom: 0;
+            right: 0;
+            border-radius: 100% 0 0 0;
+        }
+
+        .countdown-section {
+            background: linear-gradient(135deg, #be123c, #e11d48, #f43f5e);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            margin: 60px 0;
+            border-radius: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .countdown-section::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            animation: float 20s linear infinite;
+        }
+
+        .countdown-section h3 {
+            font-size: 3rem;
+            margin-bottom: 50px;
+            font-family: 'Moul', serif;
+            position: relative;
+            z-index: 2;
+        }
+
+        .countdown-section h3::before {
+            content: "⏰";
+            font-size: 3.5rem;
+            display: block;
+            margin-bottom: 20px;
+            animation: swing 2s ease-in-out infinite;
+        }
+
+        .countdown-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 30px;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .countdown-box {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .countdown-box:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        .countdown-box span {
+            display: block;
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .countdown-box small {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-family: 'Battambang', sans-serif;
+        }
+
+        .parents-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 80px 20px;
+            border-radius: 25px;
+            margin: 60px 0;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .parents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 60px;
+            margin-top: 50px;
+        }
+
+        .parents-grid h4 {
+            font-size: 2rem;
+            color: #be123c;
+            margin-bottom: 20px;
+            font-family: 'Moul', serif;
+        }
+
+        .parents-grid p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #374151;
+        }
+
+        .parents-grid b {
+            color: #be123c;
+            font-weight: 600;
+        }
+
+        .map-section {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            margin-top: 40px;
+            border: 5px solid white;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #1f2937, #374151);
+            color: white;
+            text-align: center;
+            padding: 60px 20px 40px;
+            font-size: 1.1rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            from { text-shadow: 3px 3px 10px rgba(190, 18, 60, 0.5); }
+            to { text-shadow: 3px 3px 20px rgba(190, 18, 60, 0.8), 0 0 30px rgba(190, 18, 60, 0.4); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        @keyframes float {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        @keyframes swing {
+            15% { transform: rotate(4deg); }
+            30% { transform: rotate(-3deg); }
+            45% { transform: rotate(2deg); }
+            60% { transform: rotate(-1deg); }
+            75% { transform: rotate(0.5deg); }
+            0%, 100% { transform: rotate(0deg); }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.8rem; }
+            .hero-subtitle { font-size: 2rem; }
+            .wedding-date { font-size: 1.4rem; padding: 15px 25px; }
+            .section { padding: 60px 15px; }
+            .card { padding: 40px 25px; }
+            .card h2 { font-size: 2rem; }
+            .card h2::before, .card h2::after { display: none; }
+            .card p { font-size: 1.1rem; line-height: 2; }
+            .corner-top-left, .corner-bottom-right { width: 60px; height: 60px; }
+            .map-container { height: 300px; border-radius: 15px; }
+            .countdown-section h3 { font-size: 2rem; }
+            .countdown-section h3::before { font-size: 2.5rem; }
+            .countdown-box { padding: 20px 15px; }
+            .countdown-box span { font-size: 2rem; }
+            .guest-input { max-width: 250px; font-size: 1rem; padding: 12px 20px; }
+        }
+        
+        /* Welcome Overlay */
+        .welcome-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(190, 18, 60, 0.95), rgba(225, 29, 72, 0.95));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .welcome-overlay.hidden {
+            animation: fadeOut 0.5s ease forwards;
+            pointer-events: none;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; visibility: hidden; }
+        }
+        
+        .welcome-content {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            position: relative;
+            z-index: 10001;
+            pointer-events: auto;
+        }
+        
+        .welcome-content h1 {
+            font-size: 3rem;
+            font-family: 'Great Vibes', 'Moul', cursive;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+        
+        .music-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: pulse 2s infinite;
+        }
+        
+        .start-button {
+            background: white;
+            color: #be123c;
+            border: none;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+            font-family: 'Battambang', Arial, sans-serif;
+            margin-top: 20px;
+        }
+        
+        .start-button:hover {
+            background: #f8fafc;
+            transform: scale(1.05);
+        }
+        
+        .start-button:active {
+            transform: scale(0.98);
+        }
+        
+        /* Music Control Button */
+        .music-control {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #be123c, #e11d48);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(190, 18, 60, 0.4);
+            z-index: 1000;
+            font-size: 24px;
+            color: white;
+            transition: all 0.3s ease;
+            animation: musicPulse 2s infinite;
+        }
+        
+        .music-control:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(225, 29, 72, 0.6), 0 0 30px rgba(255,255,255,0.5);
+        }
+        
+        .music-control.paused {
+            background: linear-gradient(135deg, #6b7280, #9ca3af);
+            animation: none;
+        }
+        
+        @keyframes musicPulse {
+            0%, 100% { 
+                box-shadow: 0 4px 20px rgba(190, 18, 60, 0.4), 0 0 0 0 rgba(190, 18, 60, 0.7);
+            }
+            50% { 
+                box-shadow: 0 4px 20px rgba(190, 18, 60, 0.6), 0 0 0 10px rgba(190, 18, 60, 0);
+            }
+        }
+        
+        /* Landscape mobile orientation */
+        @media (max-width: 812px) and (orientation: landscape) {
+            .hero-section {
+                min-height: 100vh;
+                padding: 20px;
+            }
+            .start-button {
+                font-size: 1.6rem;
+                padding: 20px 60px;
+                min-height: 70px;
+            }
+        }
+        
+        /* Additional animations for mobile feedback */
+        @keyframes slideIn {
+            from { 
+                opacity: 0; 
+                transform: translateX(-50%) translateY(-20px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateX(-50%) translateY(0); 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="music-icon">🎵</div>
+            <h1 class="hero-title">Sok & Bopha</h1>
+            <h2 class="hero-subtitle">មង្គលការ</h2>
+            <div class="wedding-date">២៧ មេសា ២០២៦</div>
+            
+            <input type="text" class="guest-input" id="heroGuestName" placeholder="ឈ្មោះភ្ញៀវ (ស្រេចចិត្ត)">
+            
+            <p style="font-size: 1.3rem; margin-top: 2rem; opacity: 0.9; color: #1f2937;">
+                សូមអញ្ជើញចូលរួមអបអរសាទរក្នុងពិធីមង្គលការរបស់យើងខ្ញុំ
+            </p>
+        </div>
+        <div class="arrow" onclick="document.getElementById('details').scrollIntoView({behavior: 'smooth'})">↓</div>
+    </section>
+
+    <section id="details" class="section">
+        <div class="card">
+            <div class="corner-top-left"></div>
+            <div class="corner-bottom-right"></div>
+            <h2>ព័ត៌មានលម្អិត</h2>
+            <p><strong>📅 កាលបរិច្ឆេទ:</strong> ថ្ងៃអាទិត្យ ២៧ មេសា ២០២៦</p>
+            <p><strong>⏰ ពេលវេលា:</strong> ម៉ោង ៤:០០ រសៀល</p>
+            <p><strong>📍 ទីតាំង:</strong> ព្រះវិហារ ណារ៉ុង ភូមិ​កំពង់ត្រល់​ ឃុំ​កំពង់ត្រល់​ ស្រុក​បឹងកេត​ ខេត្ត​កំពត់​</p>
+            <p><strong>🎼 សម្ពោធ:</strong> ម៉ោង ៦:០០ នាឡិកាព្រឹក</p>
+        </div>
+    </section>
+
+    <section class="countdown-section">
+        <h3>រង់ចាំរាប់ថយក្រោយ</h3>
+        <div class="countdown-grid">
+            <div class="countdown-box">
+                <span id="days">00</span>
+                <small>ថ្ងៃ</small>
+            </div>
+            <div class="countdown-box">
+                <span id="hours">00</span>
+                <small>ម៉ោង</small>
+            </div>
+            <div class="countdown-box">
+                <span id="minutes">00</span>
+                <small>នាទី</small>
+            </div>
+            <div class="countdown-box">
+                <span id="seconds">00</span>
+                <small>វិនាទី</small>
+            </div>
+        </div>
+    </section>
+
+    <section class="section parents-section">
+        <h2 style="font-size: 2.8rem; text-align: center; color: #be123c; margin-bottom: 30px; font-family: 'Moul', serif;">👨‍👩‍👧‍👦 ឪពុកម្តាយ</h2>
+        <div class="parents-grid">
+            <div>
+                <h4>👨‍👧 ខាងកូនប្រុស</h4>
+                <p>ឪពុកនាម៖ <b>សុខ សុវណ្ណារ៉ុន</b></p>
+                <p>ម្តាយនាម៖ <b>លឹម បុប្ផា</b></p>
+            </div>
+            <div>
+                <h4>👨‍👧 ខាងកូនស្រី</h4>
+                <p>ឪពុកនាម៖ <b>ដួង សុផាត</b></p>
+                <p>ម្តាយនាម៖ <b>តែ គឹមសែ</b></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section map-section">
+        <h2 style="font-size: 2.5rem; background: linear-gradient(135deg, #be123c, #e11d48, #f43f5e); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 400; margin-bottom: 50px; font-family: 'Moul', 'Battambang', serif; letter-spacing: 1px;">📍 ទីតាំងកម្មវិធី</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125125.71442145339!2d104.81427506692996!3d11.574512906387076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109513dc76a6be3%3A0x9c010ee85c525bb7!2sPhnom%20Penh!5e0!3m2!1sen!2skh!4v1707830000000!5m2!1sen!2skh" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p style="font-size: 1rem; margin-bottom: 10px;">✨ រីករាយជាមួយនឹងការប្រារព្ធមង្គលការ ✨</p>
+        <p>© 2026 Created with 💖 by <span style="background: linear-gradient(135deg, #be123c, #e11d48); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 600;">TheanService</span></p>
+    </footer>
+
+    <script>
+        // 🎵 EMBEDDED WEDDING MUSIC SYSTEM - NO EXTERNAL FILES REQUIRED
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🎵 Initializing embedded wedding music system...');
+            
+            let audioContext = null;
+            let audioBuffer = null;
+            let source = null;
+            let gainNode = null;
+            let isPlaying = false;
+            let audioStarted = false;
+            let musicLoopInterval = null;
+
+            // Wedding date for countdown
+            const weddingDate = new Date("April 27, 2026 16:00:00").getTime();
+
+            // Create Audio Context
+            function initAudioContext() {
+                try {
+                    const AudioContext = window.AudioContext || window.webkitAudioContext;
+                    audioContext = new AudioContext();
+                    gainNode = audioContext.createGain();
+                    gainNode.connect(audioContext.destination);
+                    gainNode.gain.value = 0.5;
+                    console.log('🎵 Audio Context initialized');
+                    return true;
+                } catch (e) {
+                    console.log('Web Audio API not supported');
+                    return false;
+                }
+            }
+
+            // Generate beautiful wedding melody using Web Audio API
+            function generateWeddingMelody() {
+                if (!audioContext) return null;
+
+                const sampleRate = audioContext.sampleRate;
+                const length = sampleRate * 8; // 8 seconds
+                const buffer = audioContext.createBuffer(2, length, sampleRate);
+                const leftChannel = buffer.getChannelData(0);
+                const rightChannel = buffer.getChannelData(1);
+
+                // Wedding melody - "Canon in D" inspired progression
+                const melody = [
+                    // Main melody line
+                    { freq: 293.66, start: 0.0, duration: 1.0 }, // D4
+                    { freq: 329.63, start: 1.0, duration: 1.0 }, // E4
+                    { freq: 369.99, start: 2.0, duration: 1.0 }, // F#4
+                    { freq: 392.00, start: 3.0, duration: 1.0 }, // G4
+                    { freq: 440.00, start: 4.0, duration: 1.0 }, // A4
+                    { freq: 493.88, start: 5.0, duration: 1.0 }, // B4
+                    { freq: 523.25, start: 6.0, duration: 1.0 }, // C5
+                    { freq: 587.33, start: 7.0, duration: 1.0 }, // D5
+                ];
+
+                // Bass line (harmony)
+                const bass = [
+                    { freq: 146.83, start: 0.0, duration: 2.0 }, // D3
+                    { freq: 196.00, start: 2.0, duration: 2.0 }, // G3
+                    { freq: 220.00, start: 4.0, duration: 2.0 }, // A3
+                    { freq: 146.83, start: 6.0, duration: 2.0 }, // D3
+                ];
+
+                // Generate the audio data
+                for (let i = 0; i < length; i++) {
+                    const time = i / sampleRate;
+                    let leftAmp = 0;
+                    let rightAmp = 0;
+
+                    // Main melody (right channel)
+                    melody.forEach(note => {
+                        if (time >= note.start && time < note.start + note.duration) {
+                            const noteTime = time - note.start;
+                            const envelope = Math.exp(-noteTime * 1.5) * (1 - noteTime / note.duration);
+                            const vibrato = 1 + 0.05 * Math.sin(2 * Math.PI * 5 * noteTime); // 5Hz vibrato
+                            rightAmp += Math.sin(2 * Math.PI * note.freq * vibrato * noteTime) * envelope * 0.15;
+                        }
+                    });
+
+                    // Bass line (left channel)
+                    bass.forEach(note => {
+                        if (time >= note.start && time < note.start + note.duration) {
+                            const noteTime = time - note.start;
+                            const envelope = Math.exp(-noteTime * 0.8) * (1 - noteTime / note.duration * 0.5);
+                            leftAmp += Math.sin(2 * Math.PI * note.freq * noteTime) * envelope * 0.12;
+                        }
+                    });
+
+                    // Add some reverb-like effect
+                    const reverb = (leftAmp + rightAmp) * 0.1 * Math.exp(-time * 0.5);
+                    
+                    leftChannel[i] = leftAmp + reverb;
+                    rightChannel[i] = rightAmp + reverb;
+                }
+
+                return buffer;
+            }
+
+            // Play wedding melody
+            function playWeddingMusic() {
+                if (!audioContext || !audioBuffer) return false;
+
+                try {
+                    // Stop any currently playing source
+                    if (source) {
+                        source.stop(0);
+                        source.disconnect();
+                    }
+
+                    source = audioContext.createBufferSource();
+                    source.buffer = audioBuffer;
+                    
+                    // Add some filtering for warmth
+                    const filter = audioContext.createBiquadFilter();
+                    filter.type = 'lowpass';
+                    filter.frequency.value = 2000;
+                    filter.Q.value = 1;
+                    
+                    source.connect(filter);
+                    filter.connect(gainNode);
+                    
+                    source.start(0);
+                    isPlaying = true;
+                    
+                    console.log('🎵 Wedding melody started!');
+                    
+                    // Set up loop
+                    source.onended = function() {
+                        if (isPlaying && audioStarted) {
+                            setTimeout(() => {
+                                if (isPlaying && audioStarted) {
+                                    playWeddingMusic();
+                                }
+                            }, 500); // Small gap between loops
+                        }
+                    };
+                    
+                    return true;
+                } catch (e) {
+                    console.error('Error playing music:', e);
+                    return false;
+                }
+            }
+
+            // Stop wedding melody
+            function stopWeddingMusic() {
+                if (source) {
+                    try {
+                        source.stop(0);
+                        source.disconnect();
+                    } catch (e) {
+                        console.log('Source already stopped');
+                    }
+                    source = null;
+                }
+                isPlaying = false;
+                console.log('⏸️ Wedding melody stopped');
+            }
+
+            // Create welcome overlay
+            function createWelcomeOverlay() {
+                const overlay = document.createElement('div');
+                overlay.className = 'welcome-overlay';
+                overlay.id = 'musicOverlay';
+                
+                overlay.innerHTML = `
+                    <div class="welcome-content">
+                        <div class="music-icon">🎵</div>
+                        <h1 style="font-size: 2.5rem; margin-bottom: 15px; font-family: 'Great Vibes', cursive;">សូមស្វាគមន៍</h1>
+                        <h2 style="font-size: 1.8rem; margin-bottom: 25px; font-family: 'Moul', serif;">តន្ត្រីមង្គលការ</h2>
+                        <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">ចុចដើម្បីបើកតន្ត្រី</p>
+                        <button class="start-button" id="startMusicBtn">
+                            🎶 ចាប់ផ្តើម
+                        </button>
+                        <p style="margin-top: 20px; opacity: 0.7; font-size: 0.9rem;">✨ តន្ត្រី embedded - មិនត្រូវការឯកសារក្រៅ!</p>
+                    </div>
+                `;
+                
+                document.body.appendChild(overlay);
+                
+                // Start music function
+                function startMusic(e) {
+                    if (audioStarted) return;
+                    if (e) e.preventDefault();
+                    
+                    audioStarted = true;
+                    console.log('🎵 Starting embedded wedding music...');
+                    
+                    // Resume AudioContext if suspended (iOS requirement)
+                    if (audioContext && audioContext.state === 'suspended') {
+                        audioContext.resume().then(() => {
+                            attemptMusicStart();
+                        });
+                    } else {
+                        attemptMusicStart();
+                    }
+                    
+                    function attemptMusicStart() {
+                        if (playWeddingMusic()) {
+                            overlay.classList.add('hidden');
+                            setTimeout(() => overlay.remove(), 500);
+                            showMessage('🎵 តន្ត្រីមង្គលការកំពុងចាក់', '#22c55e');
+                            createMusicControl();
+                            startCountdown();
+                        } else {
+                            overlay.classList.add('hidden');
+                            setTimeout(() => overlay.remove(), 500);
+                            showMessage('⚠️ មិនអាចចាក់តន្ត្រីបាន', '#f59e0b');
+                            startCountdown();
+                        }
+                    }
+                }
+                
+                // Event listeners
+                const startBtn = document.getElementById('startMusicBtn');
+                if (startBtn) {
+                    startBtn.addEventListener('click', startMusic);
+                    startBtn.addEventListener('touchend', startMusic, { passive: true });
+                }
+                overlay.addEventListener('touchstart', startMusic, { passive: true, once: true });
+                overlay.addEventListener('click', startMusic, { once: true });
+                
+                // Auto-start after 3 seconds
+                setTimeout(() => {
+                    if (overlay.parentNode && !audioStarted) {
+                        startMusic();
+                    }
+                }, 3000);
+            }
+            
+            // Show status messages
+            function showMessage(text, color) {
+                const msg = document.createElement('div');
+                msg.style.cssText = `
+                    position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+                    background: white; color: ${color}; padding: 15px 25px; border-radius: 25px;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 1001; font-weight: bold;
+                    font-family: 'Battambang', Arial; animation: slideIn 0.5s ease;
+                `;
+                msg.textContent = text;
+                document.body.appendChild(msg);
+                
+                setTimeout(() => msg.remove(), 4000);
+            }
+            
+            // Create music control button
+            function createMusicControl() {
+                const btn = document.createElement('div');
+                btn.className = 'music-control';
+                btn.innerHTML = '🎵';
+                btn.title = 'ត្រួតពិនិត្យតន្ត្រីមង្គលការ';
+                
+                btn.addEventListener('touchstart', () => btn.style.transform = 'scale(0.9)', { passive: true });
+                btn.addEventListener('touchend', toggleMusic, { passive: true });
+                btn.addEventListener('click', toggleMusic);
+                btn.addEventListener('mouseenter', () => btn.style.transform = 'scale(1.1)');
+                btn.addEventListener('mouseleave', () => btn.style.transform = 'scale(1)');
+                
+                function toggleMusic() {
+                    if (isPlaying) {
+                        stopWeddingMusic();
+                        btn.innerHTML = '⏸️';
+                        btn.classList.add('paused');
+                        showMessage('⏸️ បញ្ឈប់តន្ត្រី', '#f59e0b');
+                    } else {
+                        if (audioContext && audioContext.state === 'suspended') {
+                            audioContext.resume().then(() => {
+                                if (playWeddingMusic()) {
+                                    btn.innerHTML = '🎵';
+                                    btn.classList.remove('paused');
+                                    showMessage('▶️ បន្តចាក់តន្ត្រី', '#22c55e');
+                                }
+                            });
+                        } else {
+                            if (playWeddingMusic()) {
+                                btn.innerHTML = '🎵';
+                                btn.classList.remove('paused');
+                                showMessage('▶️ បន្តចាក់តន្ត្រី', '#22c55e');
+                            }
+                        }
+                    }
+                    
+                    // Haptic feedback
+                    if (navigator.vibrate) navigator.vibrate(50);
+                }
+                
+                document.body.appendChild(btn);
+            }
+
+            // Countdown timer
+            function startCountdown() {
+                setInterval(() => {
+                    const now = new Date().getTime();
+                    const distance = weddingDate - now;
+
+                    if (distance > 0) {
+                        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                        document.getElementById('days').textContent = String(days).padStart(2, '0');
+                        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+                    } else {
+                        document.querySelector('.countdown-section h3').innerHTML = "🎊 រីករាយថ្ងៃមង្គលការ! 🎊";
+                    }
+                }, 1000);
+            }
+
+            // Guest name persistence
+            const guestInput = document.getElementById('heroGuestName');
+            if (guestInput) {
+                const savedName = localStorage.getItem('weddingGuestName');
+                if (savedName) guestInput.value = savedName;
+                
+                guestInput.addEventListener('input', function() {
+                    localStorage.setItem('weddingGuestName', this.value);
+                });
+            }
+
+            // Initialize the system
+            const webAudioSupported = initAudioContext();
+            
+            if (webAudioSupported) {
+                audioBuffer = generateWeddingMelody();
+                console.log('✅ Web Audio wedding melody generated!');
+                createWelcomeOverlay();
+            } else {
+                console.log('⚠️ Web Audio not supported, starting without music');
+                startCountdown();
+            }
+            
+            console.log('✅ Embedded wedding system ready!');
+        });
+    </script>
+</body>
+</html>

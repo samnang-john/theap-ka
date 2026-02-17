@@ -1,0 +1,37 @@
+/* CSS for Print - Add this to your HTML for better PDF export */
+@media print {
+    * {
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+    
+    .hero-section {
+        height: 100vh !important;
+        page-break-after: always;
+    }
+    
+    .section {
+        page-break-inside: avoid;
+    }
+    
+    .countdown-section {
+        page-break-after: always;
+    }
+    
+    /* Remove elements that shouldn't print */
+    .music-control, 
+    #audioOverlay {
+        display: none !important;
+    }
+    
+    /* Ensure good print quality */
+    body {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+    }
+    
+    .font-khmer-elegant,
+    .font-wedding {
+        font-size: 24px !important;
+    }
+}

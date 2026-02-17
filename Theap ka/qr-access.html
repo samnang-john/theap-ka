@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code Access</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            padding: 50px; 
+            background: #f0f0f0;
+        }
+        .qr-container { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 15px; 
+            display: inline-block; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; margin-bottom: 30px; }
+        .url { 
+            font-family: monospace; 
+            background: #ffe4e6; 
+            padding: 15px; 
+            border-radius: 8px; 
+            margin: 20px 0; 
+            font-size: 16px;
+        }
+        .instructions {
+            margin-top: 30px;
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="qr-container">
+        <h1>📱 Access Wedding Website on iOS</h1>
+        
+        <h2>Method 1: Direct URL</h2>
+        <div class="url">http://192.168.1.212:8080</div>
+        
+        <h2>Method 2: QR Code</h2>
+        <div id="qr-code"></div>
+        
+        <div class="instructions">
+            <p><strong>iPhone/iPad Instructions:</strong></p>
+            <p>1. បើក Safari browser</p>
+            <p>2. វាយ URL ខាងលើ ឬ scan QR code</p>
+            <p>3. ត្រូវតែនៅក្នុង WiFi network ដូចគ្នា</p>
+        </div>
+    </div>
+
+    <script>
+        // Generate QR Code using API
+        const qrContainer = document.getElementById('qr-code');
+        const url = 'http://192.168.1.212:8080';
+        const qrAPI = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(url)}`;
+        qrContainer.innerHTML = `<img src="${qrAPI}" alt="QR Code" style="border: 2px solid #ddd;">`;
+    </script>
+</body>
+</html>
